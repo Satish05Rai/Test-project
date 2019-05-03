@@ -1,0 +1,225 @@
+<html>
+    <head>
+        <style>
+        .JS_Text{                        
+            width: 20%;            
+            border: 3px solid #00cccc;
+            text-align: center;
+            margin: auto;
+            margin-top: 2%;         
+        }
+        </style>
+    </head>
+    <body>
+        <div class="JS_Text"><h3>JavaScript: ES6</h3></div>      
+       <script>           
+    "use strict";
+    
+    // ******* Use of splice() function in JS *********
+
+    const wordsArray = ['test1', 'apple', 'elephant', 'leautinent', 'javascript', 'advance'];
+    console.log("initial array is => "+ wordsArray);
+
+    console.log(wordsArray.indexOf('apple'));
+
+    console.log("Removed item is => "+ wordsArray.splice(0,1,'test','testing'));
+    console.log("Final array =>> "+wordsArray);
+    console.log(wordsArray.indexOf('apple'));
+    
+    //******** use of slice() function in JS
+
+    const words = ['test1', 'apple', 'elephant', 'leautinent', 'javascript', 'advance'];
+
+    console.log(words.slice(3));
+
+    console.log(words.slice(3,5));
+
+    console.log(words.slice(2,6));
+
+   /* 
+    //**** use of concat() in Javascript
+
+    const arr1 = [10,11,12];
+    const arr2 = [14,15,16];
+
+    console.log(arr1.concat(arr2));
+
+    //*** reduce() function in javascript *******
+
+    const arr1 = [2, 5, 10];
+
+    const reducer = (accumulator, currentValue) => {        
+    
+    return accumulator + currentValue
+    
+    };
+
+    console.log(arr1.reduce(reducer));
+
+//******** filter() function in javascript *******
+
+var wordsArr2 = ['test1', 'apple', 'elephant', 'leautinent', 'javascript', 'advance'];
+
+const result = wordsArr2.filter( word => word.length > 6 );
+
+console.log(result);
+
+
+    // **** Find function in Javascript ****
+
+var Array1 = [5,10,15,20,200];
+
+function biggerNumber(element){
+return element < 100;
+};
+
+console.log(Array1.findIndex(biggerNumber));
+
+/*
+    // **** Find function in Javascript ****
+
+    const arr1 = [2, 5, 10,22, 12, 150, 200, 50]
+
+    const x = arr1.find(function(element){
+        return element > 5
+    });
+
+    console.log(x);
+
+
+  ***** >>>  map function in javsScript  <<< *****
+
+    const Number = [1,2,3];
+    const doubleNumber = Number.map((num) => {
+        return num*3;
+    });
+
+    console.log(Number);
+    console.log(doubleNumber);
+
+******** >>>  Switch statement in ES6  <<< ********
+
+let a = 3;
+
+switch(a){
+    case 1:
+        alert("case 1 executed");
+        break;
+    case 3:    
+        alert("case 3 executed");
+        break
+    case 4:    
+        alert("case 4 executed");
+        break;
+}
+
+ 
+// Type conversion ==> syntax is below as commented
+// let value = 123;
+// value = String(value);
+// Boolean(value);
+// Number(value);
+
+//example:
+       let value = "$"+4+2;
+       console.log(typeof(value));
+       value = Boolean(value);
+       console.log(value);       
+
+        
+       // spread operator
+
+       
+       const arr1 = [0,1,2,3,4,5,6,7]
+       const arr2 = [...arr1, 8]
+       
+       // Printing pattern in Javascript
+
+       for(let i=0; i<=arr2.length-4; i++)
+            {
+                for(let j=0; j<i; j++)
+                    {
+                        document.write(i);
+                    }
+                    document.write("<br />");
+            }            
+       
+       
+       // Class in javaScript and inheritence...
+       
+        class Gender{
+            gender = 'Male';
+            
+            printGender = () => {
+                console.log(this.gender);
+            }
+        }
+        class Person extends Gender{            
+            
+            name = 'Max';
+            printMyName = () => {
+                console.log(this.name);
+            }
+        }
+
+        const person = new Person();
+        person.printMyName();
+        person.printGender();
+      
+// example for class ends here...
+            
+           'use strict';
+           let add = function(x,y){               
+                return x*y;
+           };
+           let mult = add(10,22);
+           
+
+           let Car = function(color){
+            if(!new.target) throw 'Car() must be called with new.';
+               this.color = color;
+           };
+
+           let redCar = new Car('red');
+           console.log(redCar.color);
+
+           
+            // example of closure (closure inside the loop and with setTimeout)
+            for (let i = 1; i < 5; i++) {
+                setTimeout( () =>{
+                    alert("Hello Satish!");
+                    console.log(i);
+                },2000);
+                
+            } 
+            console.log("after the 2 seconds...");
+            
+            // Example of a closure (inside the function)
+            let f = () => {
+                let i = 10;
+                let j = 20;
+
+                return () =>{
+                    console.log(i);
+                    console.log(j);
+                }
+            };
+            console.dir(f());
+
+             // Example of arrow function
+            myName = (name,age) => {
+                console.log(name,age);
+            }
+            myName('test print',28);
+            
+            // Example of closure (simple example)
+            let passed = 3;
+            let addTo = function(){
+                let inner = 2;
+                return passed + inner;
+            }
+            console.dir(addTo);
+            */             
+        </script>
+    </body>
+</html>
